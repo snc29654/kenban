@@ -9,7 +9,7 @@ m_index = 0
 dlist = []
  
 def Play_Hz(Hz):
-    Beep(Hz, 250)
+    Beep(Hz, 400)
 def Play_Hz_1000(Hz):
     Beep(Hz, 1000)
 #ここからGUI
@@ -91,8 +91,9 @@ def btn_click11():
     dlist[6]=5
     dlist[7]=3
     dlist[8]=14
+    dlist[9]=14
     global m_index
-    m_index=9
+    m_index=10
     thread1 = threading.Thread(target=replay,args=("one",))
     thread1.start()
 def replay(param):
