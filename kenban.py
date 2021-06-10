@@ -9,7 +9,9 @@ m_index = 0
 dlist = []
  
 def Play_Hz(Hz):
-    Beep(Hz, 500)
+    Beep(Hz, 250)
+def Play_Hz_1000(Hz):
+    Beep(Hz, 1000)
 #ここからGUI
 def btn_click1():
     set_m(0)
@@ -88,7 +90,7 @@ def btn_click11():
     dlist[5]=2
     dlist[6]=5
     dlist[7]=3
-    dlist[8]=0
+    dlist[8]=14
     global m_index
     m_index=9
     thread1 = threading.Thread(target=replay,args=("one",))
@@ -142,6 +144,9 @@ def replay(param):
         if v == 13:
             Play_Hz(1109)
             txt2.insert(tkinter.END,u'ド#')
+        if v == 14:
+            Play_Hz_1000(523)
+            txt2.insert(tkinter.END,u'ド-')
         if m_index == key_count:
             break
     if param == "cont":
