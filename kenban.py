@@ -79,6 +79,20 @@ def btn_click9():
 def btn_click10():
     thread1 = threading.Thread(target=replay,args=("cont",))
     thread1.start()
+def btn_click11():
+    dlist[0]=7
+    dlist[1]=6
+    dlist[2]=7
+    dlist[3]=6
+    dlist[4]=7
+    dlist[5]=2
+    dlist[6]=5
+    dlist[7]=3
+    dlist[8]=0
+    global m_index
+    m_index=9
+    thread1 = threading.Thread(target=replay,args=("one",))
+    thread1.start()
 def replay(param):
     global m_index
     key_count = 0;
@@ -168,8 +182,13 @@ btn8u.place(x=460, y=5)
 
 btn9 = tkinter.Button(root, text='再生', command=btn_click9, width=3)
 btn9.place(x=500, y=10)
+
 btn10 = tkinter.Button(root, text='繰り返し再生', command=btn_click10, width=10)
 btn10.place(x=550, y=10)
+
+btn11 = tkinter.Button(root, text='エリーゼ', command=btn_click11, width=10)
+btn11.place(x=550, y=35)
+
 
 txt = tkinter.Entry(width=80)
 txt.place(x=90, y=60)
