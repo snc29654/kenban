@@ -15,34 +15,59 @@ def btn_click1():
     set_m(0)
     Play_Hz(523)
     txt.insert(tkinter.END,u'ド')
-def btn_click2():
+def btn_click1u():
     set_m(1)
+    Play_Hz(554)
+    txt.insert(tkinter.END,u'ド#')
+
+def btn_click2():
+    set_m(2)
     Play_Hz(587)
     txt.insert(tkinter.END,u'レ')
+def btn_click2u():
+    set_m(3)
+    Play_Hz(622)
+    txt.insert(tkinter.END,u'レ#')
 def btn_click3():
-    set_m(2)
+    set_m(4)
     Play_Hz(659)
     txt.insert(tkinter.END,u'ミ')
 def btn_click4():
-    set_m(3)
+    set_m(5)
     Play_Hz(698)
     txt.insert(tkinter.END,u'ファ')
+def btn_click4u():
+    set_m(6)
+    Play_Hz(740)
+    txt.insert(tkinter.END,u'ファ#')
 def btn_click5():
-    set_m(4)
+    set_m(7)
     Play_Hz(784)
     txt.insert(tkinter.END,u'ソ')
+def btn_click5u():
+    set_m(8)
+    Play_Hz(831)
+    txt.insert(tkinter.END,u'ソ#')
 def btn_click6():
-    set_m(5)
+    set_m(9)
     Play_Hz(880)
     txt.insert(tkinter.END,u'ラ')
+def btn_click6u():
+    set_m(10)
+    Play_Hz(932)
+    txt.insert(tkinter.END,u'ラ#')
 def btn_click7():
-    set_m(6)
+    set_m(11)
     Play_Hz(988)
     txt.insert(tkinter.END,u'シ')
 def btn_click8():
-    set_m(7)
+    set_m(12)
     Play_Hz(1047)
     txt.insert(tkinter.END,u'ド')
+def btn_click8u():
+    set_m(13)
+    Play_Hz(1109)
+    txt.insert(tkinter.END,u'ド#')
  
 def set_m(mmm):
     global m_index
@@ -65,26 +90,44 @@ def replay(param):
             Play_Hz(523)
             txt2.insert(tkinter.END,u'ド')
         if v == 1:
+            Play_Hz(554)
+            txt2.insert(tkinter.END,u'ド#')
+        if v == 2:
             Play_Hz(587)
             txt2.insert(tkinter.END,u'レ')
-        if v == 2:
+        if v == 3:
+            Play_Hz(622)
+            txt2.insert(tkinter.END,u'レ#')
+        if v == 4:
             Play_Hz(659)
             txt2.insert(tkinter.END,u'ミ')
-        if v == 3:
+        if v == 5:
             Play_Hz(698)
             txt2.insert(tkinter.END,u'ファ')
-        if v == 4:
+        if v == 6:
+            Play_Hz(740)
+            txt2.insert(tkinter.END,u'ファ#')
+        if v == 7:
             Play_Hz(784)
             txt2.insert(tkinter.END,u'ソ')
-        if v == 5:
+        if v == 8:
+            Play_Hz(831)
+            txt2.insert(tkinter.END,u'ソ#')
+        if v == 9:
             Play_Hz(880)
             txt2.insert(tkinter.END,u'ラ')
-        if v == 6:
+        if v == 10:
+            Play_Hz(932)
+            txt2.insert(tkinter.END,u'ラ#')
+        if v == 11:
             Play_Hz(988)
             txt2.insert(tkinter.END,u'シ')
-        if v == 7:
+        if v == 12:
             Play_Hz(1047)
             txt2.insert(tkinter.END,u'ド')
+        if v == 13:
+            Play_Hz(1109)
+            txt2.insert(tkinter.END,u'ド#')
         if m_index == key_count:
             break
     if param == "cont":
@@ -92,21 +135,37 @@ def replay(param):
 #リストを100個で初期化            
 dlist = [i for i in range(100)]
 btn1 = tkinter.Button(root, text='ド', command=btn_click1, width=3)
-btn1.place(x=100, y=10)
+btn1.place(x=100, y=30)
 btn2 = tkinter.Button(root, text='レ', command=btn_click2, width=3)
-btn2.place(x=150, y=10)
+btn2.place(x=150, y=30)
 btn3 = tkinter.Button(root, text='ミ', command=btn_click3, width=3)
-btn3.place(x=200, y=10)
+btn3.place(x=200, y=30)
 btn4 = tkinter.Button(root, text='ファ', command=btn_click4, width=3)
-btn4.place(x=250, y=10)
+btn4.place(x=250, y=30)
 btn5 = tkinter.Button(root, text='ソ', command=btn_click5, width=3)
-btn5.place(x=300, y=10)
+btn5.place(x=300, y=30)
 btn6 = tkinter.Button(root, text='ラ', command=btn_click6, width=3)
-btn6.place(x=350, y=10)
+btn6.place(x=350, y=30)
 btn7 = tkinter.Button(root, text='シ', command=btn_click7, width=3)
-btn7.place(x=400, y=10)
+btn7.place(x=400, y=30)
 btn8 = tkinter.Button(root, text='ド', command=btn_click8, width=3)
-btn8.place(x=450, y=10)
+btn8.place(x=450, y=30)
+
+btn1u = tkinter.Button(root, text='ド#', command=btn_click1u, width=3)
+btn1u.place(x=110, y=5)
+btn2u = tkinter.Button(root, text='レ#', command=btn_click2u, width=3)
+btn2u.place(x=160, y=5)
+btn4u = tkinter.Button(root, text='ファ#', command=btn_click4u, width=3)
+btn4u.place(x=260, y=5)
+btn5u = tkinter.Button(root, text='ソ#', command=btn_click5u, width=3)
+btn5u.place(x=310, y=5)
+btn6u = tkinter.Button(root, text='ラ#', command=btn_click6u, width=3)
+btn6u.place(x=360, y=5)
+btn8u = tkinter.Button(root, text='ド#', command=btn_click8u, width=3)
+btn8u.place(x=460, y=5)
+
+
+
 btn9 = tkinter.Button(root, text='再生', command=btn_click9, width=3)
 btn9.place(x=500, y=10)
 btn10 = tkinter.Button(root, text='繰り返し再生', command=btn_click10, width=10)
