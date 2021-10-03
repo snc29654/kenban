@@ -4,10 +4,17 @@ from contextlib import closing
 root = tkinter.Tk()
 from winsound import Beep
 from time import sleep
+from tkinter import ttk
 BASE = 300
 m_index = 0
 dlist = []
  
+
+s = ttk.Style()
+s.theme_use('classic')
+s.configure('MyWidget.TButton', background='#ffffcc')
+
+
 def Play_Hz(Hz):
     Beep(Hz, 400)
 def Play_Hz_1000(Hz):
@@ -255,21 +262,21 @@ def replay(param):
         replay(param)    
 #リストを100個で初期化            
 dlist = [i for i in range(100)]
-btn1 = tkinter.Button(root, text='ド', command=btn_click1, width=3)
+btn1 = ttk.Button(root, text='ド', command=btn_click1, width=2 ,style='MyWidget.TButton')
 btn1.place(x=100, y=30)
-btn2 = tkinter.Button(root, text='レ', command=btn_click2, width=3)
+btn2 = ttk.Button(root, text='レ', command=btn_click2, width=2 ,style='MyWidget.TButton')
 btn2.place(x=150, y=30)
-btn3 = tkinter.Button(root, text='ミ', command=btn_click3, width=3)
+btn3 = ttk.Button(root, text='ミ', command=btn_click3, width=2 ,style='MyWidget.TButton')
 btn3.place(x=200, y=30)
-btn4 = tkinter.Button(root, text='ファ', command=btn_click4, width=3)
+btn4 = ttk.Button(root, text='ファ', command=btn_click4, width=3 ,style='MyWidget.TButton')
 btn4.place(x=250, y=30)
-btn5 = tkinter.Button(root, text='ソ', command=btn_click5, width=3)
+btn5 = ttk.Button(root, text='ソ', command=btn_click5, width=2 ,style='MyWidget.TButton')
 btn5.place(x=300, y=30)
-btn6 = tkinter.Button(root, text='ラ', command=btn_click6, width=3)
+btn6 = ttk.Button(root, text='ラ', command=btn_click6, width=2 ,style='MyWidget.TButton')
 btn6.place(x=350, y=30)
-btn7 = tkinter.Button(root, text='シ', command=btn_click7, width=3)
+btn7 = ttk.Button(root, text='シ', command=btn_click7, width=2 ,style='MyWidget.TButton')
 btn7.place(x=400, y=30)
-btn8 = tkinter.Button(root, text='ド', command=btn_click8, width=3)
+btn8 = ttk.Button(root, text='ド', command=btn_click8, width=2 ,style='MyWidget.TButton')
 btn8.place(x=450, y=30)
 
 btn1u = tkinter.Button(root, text='ド#', command=btn_click1u, width=3)
